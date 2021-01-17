@@ -3,7 +3,7 @@ import urllib
 import urllib.request
 from bs4 import BeautifulSoup
 
-theurl = "http://registrar.indiana.edu/browser/soc4172/index.shtml"
+theurl = "https://utilities.registrar.indiana.edu/course-browser/prl/soc4212/index.shtml"
 thepage = urllib.request.urlopen(theurl)
 soup = BeautifulSoup(thepage, "html.parser")
 
@@ -56,7 +56,7 @@ class Application (Frame):
         subject = ''
         subject = self.entry2.get()
 
-        theurl2 = "http://registrar.indiana.edu/browser/soc4172/" + dept + "/index.shtml"
+        theurl2 = "https://utilities.registrar.indiana.edu/course-browser/prl/soc4212fac/index.shtml" + dept + "/index.shtml"
         thepage2 = urllib.request.urlopen(theurl2)
         soup2 = BeautifulSoup(thepage2, "html.parser")
         
